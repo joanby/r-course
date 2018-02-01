@@ -1,0 +1,100 @@
+{
+  "results": [
+    {
+      "utc_offset": 3600000,
+      "country": "ES",
+      "visibility": "public",
+      "city": "Madrid",
+      "timezone": "Europe/Madrid",
+      "created": 1504948092000,
+      "topics": [
+        {
+          "urlkey": "science",
+          "name": "Ciencia",
+          "id": 85
+        },
+        {
+          "urlkey": "edtech",
+          "name": "Educación y tecnología",
+          "id": 7203
+        },
+        {
+          "urlkey": "matematica",
+          "name": "Matematica",
+          "id": 11400
+        },
+        {
+          "urlkey": "learning",
+          "name": "Aprendizaje",
+          "id": 18296
+        },
+        {
+          "urlkey": "mathematics",
+          "name": "Mathematics",
+          "id": 33876
+        },
+        {
+          "urlkey": "applied-math",
+          "name": "Applied Math",
+          "id": 41759
+        },
+        {
+          "urlkey": "science-technology-engineering-math",
+          "name": "Science Technology Engineering Math",
+          "id": 68682
+        }
+      ],
+      "link": "https://www.meetup.com/Matematicas-en-Madrid/",
+      "rating": 0,
+      "description": "<p>Este es un grupo de clases para gente que quieran tener éxito en matemáticas a nivel universitario. Los temas dependerán de la demanda pero empezaremos con Cálculo, una asignatura impartida en casi todos los estudios universitarios. La primera sesión para cada persona es gratis (no tenemos duda de que volverás).</p>",
+      "lon": -3.7100000381469727,
+      "group_photo": {
+        "highres_link": "https://secure.meetupstatic.com/photos/event/8/5/0/5/highres_464374053.jpeg",
+        "photo_id": 464374053,
+        "base_url": "https://secure.meetupstatic.com",
+        "type": "event",
+        "photo_link": "https://secure.meetupstatic.com/photos/event/8/5/0/5/600_464374053.jpeg",
+        "thumb_link": "https://secure.meetupstatic.com/photos/event/8/5/0/5/thumb_464374053.jpeg"
+      },
+      "join_mode": "open",
+      "organizer": {
+        "member_id": 236032018,
+        "name": "manjira",
+        "photo": {
+          "highres_link": "https://secure.meetupstatic.com/photos/member/1/2/4/3/highres_270484675.jpeg",
+          "photo_id": 270484675,
+          "base_url": "https://secure.meetupstatic.com",
+          "type": "member",
+          "photo_link": "https://secure.meetupstatic.com/photos/member/1/2/4/3/member_270484675.jpeg",
+          "thumb_link": "https://secure.meetupstatic.com/photos/member/1/2/4/3/thumb_270484675.jpeg"
+        }
+      },
+      "members": 19,
+      "name": "Matemáticas sin miedo",
+      "id": 25848361,
+      "urlname": "Matematicas-en-Madrid",
+      "category": {
+        "name": "education/learning",
+        "id": 6,
+        "shortname": "education-learning"
+      },
+      "lat": 40.41999816894531,
+      "who": "Miembros"
+    }
+  ],
+  "meta": {
+    "next": "",
+    "method": "Groups",
+    "total_count": 1,
+    "link": "https://api.meetup.com/2/groups",
+    "count": 1,
+    "description": "None",
+    "lon": -3.7100000381469727,
+    "title": "Meetup Groups v2",
+    "url": "https://api.meetup.com/2/groups?country=es&offset=0&city=madrid&sign=True&format=json&lon=-3.71000003815&topic=mathematics&photo-host=public&page=20&radius=100.0&fields=&lat=40.4199981689&order=id&desc=false",
+    "signed_url": "https://api.meetup.com/2/groups?country=es&offset=0&city=madrid&format=json&lon=-3.71000003815&topic=mathematics&photo-host=public&page=20&radius=100.0&fields=&lat=40.4199981689&order=id&desc=false&sig_id=218580538&sig=a476b2aea3edf918ae48ae709b6c6bd7555288ee",
+    "id": "",
+    "updated": 1510784961000,
+    "lat": 40.41999816894531
+  }
+}

@@ -34,6 +34,9 @@ library(quantmod)
 getSymbols("AAPL")
 barChart(AAPL)
 chartSeries(AAPL, TA = "NULL")
+candleChart(AAPL, up.col = "black", 
+            dn.col="red", theme = "white")
+
 head(AAPL)
 chartSeries(AAPL[,4],TA = "addMACD()")
 

@@ -1,0 +1,27 @@
+---
+title: "ShinyMarkdown"
+author: "Juan Gabriel Gomila"
+date: "21/1/2018"
+output: html_document
+---
+
+#Esto es una web app de Shiny
+```{r, echo=FALSE}
+library(knitr)
+library(webshot)
+knitr::include_app("http://127.0.0.1:4961", height = 1000)
+
+appshot(app = "../IntroShinyWebApp/", file = "shiny.png",
+        vheight = 400)
+knitr::include_graphics("shiny.png")
+```
+
+#Mostrar codigo de los chunks
+```{r eval=TRUE}
+knitr::read_chunk("../IntroShinyWebApp/ui.R")
+```
+
+```{r ui, eval=F}
+
+```
+

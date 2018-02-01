@@ -1,0 +1,112 @@
+---
+title: "Introducción a Markdown"
+author: "Juan Gabriel Gomila"
+date: "20/1/2018"
+output:
+  html_document: 
+    theme: cosmo
+    toc : yes
+  word_document: default
+  pdf_document: default
+---
+* * * 
+# R Markdown
+
+```{r}
+library(htmlTable)
+library(knitr)
+library(kableExtra)
+```
+
+
+Este es un fichero creado con **Juan Gabriel** <http://juangabrielgomila.com>
+
+<p>This is an R Markdown document. <i>Markdown</i> is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.</p>
+
+<!-- Esto es un comentario -->
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+# HTML Contents
+
+<p>Esto es un nuevo párrafo escrito con etiquetas de HTML</p>
+
+<table border=1>
+<th>Ventajas</th>
+<th>Inconvenientes </th>
+<tr>
+<td>Es fácil de utilizar</td>
+<td>Necesita previsión y planning </td>
+</tr>
+<tr>
+<td>Puede exportar a múltiples formatos</td>
+<td>Necesitamos conocer otras tecnologías</td>
+</tr>
+</table>
+
+# Embed Code
+## Set Working Directory
+
+Se puede definir cualquier código en *R*  haciendo uso de los tres acentos agudos. 
+
+* El parámetro echo=FALSE, indica que el chunk no se mostrará en el documento. También se pueden definir las opciones de mostrar/o no los chunks de forma global en todo el documento.
+* También se puede definir una caché global para no sobrecargar la generación de ficheros. 
+* Se puede definir el directorio raíz de donde cargar cualquier fichero de datos haciendo uso del parámetro root.dir. 
+    + hola
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(cache = T)
+knitr::opts_chunk$set(root.dir = "../../data/tema10/")
+```
+
+##Loading Data
+```{r loadingData, echo=FALSE}
+  auto <- read.csv("../../data/tema10/auto-mpg.csv")
+```
+
+Después de cargar los datos, solemos mirar información acerca de los primeros elementos del data frame, la estructura de las columnas del mismo o incluso un resumen de los estadísticos básicos de cada una.
+
+```{r}
+  htmlTable(head(auto),
+            caption = "Tabla con las primeras entradas del data set auto",
+            tfoot = "&dagger; Esto podría ser un comentario acerca de la tabla",
+            col.rgroup = c("none", "#F7F7F7"),
+            col.columns = c("none",rep("#F55555",7), "#5555F5"),
+            rnames = head(auto[,9])
+  )
+
+  kable(head(auto), "html") %>%
+    kable_styling(bootstrap_options = c("striped", 
+                                        "hover",
+                                        "condensed"),
+                  full_width = F, position = "right") %>%
+    column_spec(1, bold = T, border_right = T) %>%
+    column_spec(9, width = "20em", background = "gray") %>%
+    row_spec(3:5, bold = T, color = "white", background = "#F82615") %>%
+    row_spec(0, angle = -45)
+   
+
+  str(auto)
+  summary(auto)
+```
+
+### Plot data
+
+You can also embed plots, for example:
+
+```{r plot, echo=FALSE, fig.height=6, fig.width=9}
+  plot(auto$mpg~auto$weight)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+### Inline R
+
+Hemos hecho uso de un data frame de coches que contiene `r nrow(auto)` muestras de coches y cada uno de ellos tienen `r ncol(auto)` variables.
+
+
