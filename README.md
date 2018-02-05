@@ -16,7 +16,7 @@ A lo largo del curso, conoceremos los problemas comunes y los obstáculos que se
 Al final de este curso, tendrás todo el conocimiento que necesita para convertirte en un experto en análisis de datos con R, y poner sus habilidades a prueba en escenarios del mundo real.
 
 
-## Tema 1 - Adquirir y preparar nuestros ingredientes - Los datos
+## Tema 1 - Adquirir y preparar nuestros ingredientes - Los datos https://github.com/joanby/r-course/tree/master/scripts/tema1
 Los ingredientes de todo analista de datos son los datos. No se encuentran todos del mismo modo ni en el mismo formato, así que lo primero que nos toca es conocer donde buscarlos y qué esperar
 
 ## Tema 2 - ¿Qué tenemos aquí? - El análisis exploratorio datos
