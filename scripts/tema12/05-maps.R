@@ -8,12 +8,12 @@ map("world", fill = TRUE, col = palette(rainbow(8)))
 
 map("world", "tanzania")
 
-map("france")
+map("france", sqmi = F)
 map("italy")
-map("world", "spain")
-map("usa")
+map("world", "spain", sqmi = F)
+map("usa", sqmi = F)
 
-map("state")
+map("state" sqmi = F)
 map("state", interior=F)
 map("county")
 
