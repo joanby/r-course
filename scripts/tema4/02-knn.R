@@ -72,7 +72,7 @@ rmse.reg <- sqrt(mean(reg$residuals^2))
 rmse.reg
 
 ##Función para automatizar KNN
-rda.knn.reg <- function(tr_predictor, val_predictors,
+rdacb.knn.reg <- function(tr_predictor, val_predictors,
                           tr_target, val_target, k){
   library(FNN)
   res <- knn.reg(tr_predictor, val_predictors,
