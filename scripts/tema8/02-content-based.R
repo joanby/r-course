@@ -81,9 +81,13 @@ getRecommendedMovies <- function(like, mclust, m_title_df){
     recommend <- m_title_df[sample.int(n = nrow(m_title_df),
                                        size = 100),1]
   } else {
-    recommend <- as.vector(t(subset(df_aux, 
-                                    Cluster == like, 
-                                    select = MovieID)))
+    recommend <- as.vector(
+      t(subset(df_aux, 
+               Cluster == like, 
+               select = MovieID
+               )
+        )
+      )
   }
 }
 
@@ -109,11 +113,7 @@ suggestMovies <- function(movie_df, user_df, user_id, num_movies){
   write.table(suggestions[2], row.names = F, col.names = F)
 }
 
-
-
-
 suggestMovies(movie_title_df, users_df, 308, 10)
-
 
 movie_title_df[match(movie_title_df$MovieID,
                      users_df[users_df$UserID==196,]$MovieID),2]

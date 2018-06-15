@@ -36,6 +36,8 @@ ibcf.mod <- getModel(ibcf)
 
 ibcf.mod
 
+View(ibcf.mod$sim)
+
 n_rec <- 10
 ibcf.pred <- predict(object = ibcf,
                      newdata = data_test,
@@ -56,6 +58,8 @@ View(ibcf.rec.matrix)
 ubcf <- Recommender(data = data_train, method = "UBCF")
 ubcf.mod <- getModel(ubcf)
 ubcf.mod
+
+View(ubcf.mod$data)
 
 ubcf.pred <- predict(object = ubcf, 
                      newdata = data_test, 
