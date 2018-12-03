@@ -34,3 +34,4 @@ vignettes/*.pdf
 .Rproj.user
 data/.DS_Store
 scripts/.DS_Store
+.DS_Store
