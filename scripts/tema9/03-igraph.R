@@ -80,7 +80,7 @@ names(membership)
 rownames(membership) <- c("u1","u2","u3","u4","u5","u6","u7","u8","u9","u10")
 rownames(membership)
 
-bg <- graph.incidence(membership)
+bg <- graph.incidence(as.matrix(membership)) # igraph 2 ya no acepta un data.frame: hay que pasarle la matriz
 bg
 V(bg)$type
 V(bg)$name

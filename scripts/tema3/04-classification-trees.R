@@ -24,7 +24,9 @@ prp(mod, type = 2, extra = 104, nn = TRUE,
 
 mod$cptable
 
-mod.pruned <- prune(mod, mod$cptable[8, "CP"])
+# En el vídeo, mod$cptable[8, "CP"]: la penúltima fila. Con caret de hoy la partición aleatoria sale
+# distinta aunque la semilla sea la misma, el árbol tiene menos filas y la 8 no existe.
+mod.pruned <- prune(mod, mod$cptable[nrow(mod$cptable) - 1, "CP"])
 
 prp(mod.pruned, type = 2, extra = 104, nn = TRUE,
     fallen.leaves = TRUE, faclen = 4, varlen = 8,

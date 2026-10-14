@@ -1,15 +1,17 @@
 #Ficheros ESRI 
 install.packages("sp")
-install.packages("rgdal")
+install.packages("sf") # en el vídeo, rgdal: se retiró de CRAN en 2023
 
 library(sp)
-library(rgdal)
+library(sf)
 
-countries.sp <- readOGR("../data/tema12/natural_earth/",
-                        "ne_50m_admin_0_countries")
+# En el vídeo: readOGR("../data/tema12/natural_earth/", "ne_50m_admin_0_countries"). st_read lee lo mismo
+# y as(..., "Spatial") lo convierte en el objeto de sp de siempre.
+countries.sp <- as(st_read("../data/tema12/natural_earth/",
+                           "ne_50m_admin_0_countries", stringsAsFactors = TRUE), "Spatial")
 
-airports.sp <- readOGR("../data/tema12/natural_earth/",
-                       "ne_50m_airports")
+airports.sp <- as(st_read("../data/tema12/natural_earth/",
+                          "ne_50m_airports", stringsAsFactors = TRUE), "Spatial")
 
 class(countries.sp)
 class(airports.sp)

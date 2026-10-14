@@ -1,4 +1,4 @@
-auto <- read.csv("../data/tema2/auto-mpg.csv")
+auto <- read.csv("../data/tema2/auto-mpg.csv", stringsAsFactors = TRUE) # como en R 3, antes de 2020
 auto$cylinders <- factor(auto$cylinders, 
                          levels = c(3,4,5,6,8),
                          labels = c("3cil", "4cil", "5cil", "6cil", "8cil"))

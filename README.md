@@ -1,4 +1,7 @@
 # Curso completo de análisis de datos con R: de cero a experto con JB
+
+> **🆕 Octubre de 2026 — rama [`update-2026`](https://github.com/joanby/r-course/tree/update-2026):** el mismo código del curso, adaptado a R y los paquetes de hoy (R 4.5; `maptools`, `rgdal` y `dummies` ya no existen en CRAN). Qué ha cambiado y por qué: [`CAMBIOS-2026.md`](https://github.com/joanby/r-course/blob/update-2026/CAMBIOS-2026.md).
+
 Apúntate al curso completo desde aquí mismo - https://www.udemy.com/r-data-science/?couponCode=GIT_JB
 
 Una introduccion al analisis de datos con R y R Studio. 

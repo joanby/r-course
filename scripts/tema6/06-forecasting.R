@@ -1,4 +1,4 @@
-inf <- read.csv("../data/tema6/INFY-monthly.csv")
+inf <- read.csv("../data/tema6/infy-monthly.csv")
 tail(inf)
 
 inf.ts <- ts(inf$Adj.Close, start=c(1999,3), frequency = 12)

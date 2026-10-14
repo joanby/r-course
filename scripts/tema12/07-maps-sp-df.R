@@ -1,8 +1,9 @@
 #Conversiones entre DF, Mapas y objetos espaciales
 library(maps)
 
-install.packages("maptools")
-library(maptools) # carga sp
+# maptools se retiró de CRAN en 2023: sp y sf hacen lo mismo
+install.packages(c("sp", "sf"))
+library(sp)
 #SpatialXXXXXXXDataFrame
 
 #maps -> spatial poligons -> spatial poligos data frame
@@ -16,8 +17,8 @@ str(nj.map)
 
 nj.county <- sapply(strsplit(nj.map$names, ","), function(x) x[2])
 
-nj.sp <- map2SpatialPolygons(nj.map, IDs = nj.county,
-                             proj4string = CRS("+proj=longlat +ellps=WGS84"))
+# En el vídeo: map2SpatialPolygons(nj.map, IDs = nj.county, proj4string = CRS("+proj=longlat +ellps=WGS84"))
+nj.sp <- spChFIDs(as(sf::st_geometry(sf::st_as_sf(nj.map)), "Spatial"), nj.county)
 
 class(nj.sp)
 
